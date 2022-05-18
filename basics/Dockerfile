@@ -14,6 +14,9 @@ FROM node:4.6 as finalartifact
 RUN sleep 10
 RUN echo "Final artifact"
 
+WORKDIR /app
+ADD . /app
+
 RUN npm install
 EXPOSE 3000
 CMD npm start
